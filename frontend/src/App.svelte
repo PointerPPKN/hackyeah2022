@@ -5,7 +5,7 @@
 </script>
 
 <div class="app">
-  <Map x={11} y={43}/>
+  <Map x={"51.107883"} y={"17.038538"}/>
   <Card_place />
   <Card_list />
 </div>

@@ -6,23 +6,21 @@
     let map;
     let mapContainer;
     export let x,y;
-    x=110.0;
-    y=25.0;
     onMount(() => {
   
       const apiKey = 'ANx2EYNzbsX387SJBbPe';
   
-      const initialState = { lng: x, lat: y, zoom: 14 };
+      
   
       map = new Map({
         container: mapContainer,
         style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${apiKey}`,
-        center: [initialState.lng, initialState.lat],
-        zoom: initialState.zoom
+        center: [y, x],
+        zoom: 14
       });
       map.addControl(new NavigationControl(), 'top-right');
       new Marker({color: "#FF0000"})
-        .setLngLat([139.7525,35.6846])
+        .setLngLat([y,x])
         .addTo(map);
     });
   
