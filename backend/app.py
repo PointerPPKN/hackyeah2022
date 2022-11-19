@@ -6,10 +6,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////workspaces/hackyeah2022/back
 db = SQLAlchemy(app)
 
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
+class tag(db.Model):
+    id = db.Column(db.Integer, db.Identity(start=0, cycle=True), primary_key=True)
+    tag_name = db.Column(db.String(50))
+    tag_type = db.Column(db.Integer, nullable=False)
+    cord_x = db.Column(db.Float, nullable=False)
+    cord_y = db.Column(db.Float, nullable=False)
+
+
 
     def __repr__(self):
-        return f'<User {self.username}>'
+        return f'<tag> {self.tagname}'
+
+
+

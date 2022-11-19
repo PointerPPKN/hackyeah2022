@@ -11,6 +11,6 @@ class tag(db.Model):
 
     def __repr__(self):
         return f'<tag> {self.tagname}'
-        
+
 
 
