@@ -50,3 +50,12 @@ def update(id):
             db.session.commit()
             return '', 204
         return f"localisation with id = {id} Does not exist", 404
+@app.route('/data/<int:id>/delete', methods=['POST'])
+def delete(id):
+    Localisations = tag.query.filter_by(id=id).first()
+    if request.method == 'POST':
+        if Localisations:
+            db.session.delete(Localisations)
+            db.session.commit()
+            return '', 204
+        return 'Could not remove', 404
