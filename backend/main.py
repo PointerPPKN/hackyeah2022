@@ -22,7 +22,7 @@ def read_data_list():
     return json.dumps(tags, indent=4), 200
 
 
-@app.route('/data/<int:id>' , methods = ['Get'])
+@app.route('/data/<int:id>' , methods = ['GET'])
 def read_one_element():
     localisation = Tag.query.filter_by(id=id).first()
     if localisation:
