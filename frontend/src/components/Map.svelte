@@ -5,12 +5,14 @@
   
     let map;
     let mapContainer;
-  
+    export let x,y;
+    x=110.0;
+    y=25.0;
     onMount(() => {
   
       const apiKey = 'ANx2EYNzbsX387SJBbPe';
   
-      const initialState = { lng: 139.753, lat: 35.6844, zoom: 14 };
+      const initialState = { lng: x, lat: y, zoom: 14 };
   
       map = new Map({
         container: mapContainer,
