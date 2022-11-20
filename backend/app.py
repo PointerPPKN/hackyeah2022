@@ -25,10 +25,10 @@ class Tag(db.Model):
 
 @app.route('/data/create' , methods = ['POST'])
 def create():
-    type = request.form['type']
+    tag_type = request.form['tag_type']
     cord_x = request.form['cord_x']
     cord_y = request.form['cord_y']
-    localisations = Tag(type=type, cord_x=cord_x, cord_y=cord_y)
+    localisations = Tag(tag_type=tag_type, cord_x=cord_x, cord_y=cord_y)
     db.session.add(localisations)
     db.session.commit()
     return '', 204
