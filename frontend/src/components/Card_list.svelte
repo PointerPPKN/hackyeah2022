@@ -2,7 +2,9 @@
     import { Router, Link, Route } from "svelte-routing";
 </script>
 <div class="container">
-    <div id="button1"><p><Link to="about">🔙</Link></p></div>
+    <div id="button1"><p><Link to="/">🔙</Link></p></div>
+    <div id="button3"><p><Link to="generator">🎮</Link></p></div>
+    <div id="button4"><p><Link to="all">🛍️</Link></p></div>
     <img src="https://cdn.cmc-gallery.pl/static/files/gallery/156/699374_1560171715.jpg" alt="">
     <div id="tittle">
         <h1>Empik Wrocław</h1>
@@ -34,7 +36,7 @@
         border: 2px solid #000000;
         box-shadow: 0px 0px 0px 2px #381C1C, 0px 0px 0px 4px #E79B7B, 0px 0px 0px 6px #FFFFFF;
     }
-    #button1{
+    #button1,#button3,#button4{
         padding: 0.5% 3% 0.5% 3%;
         background-color: white;
         float: right;
@@ -82,5 +84,11 @@
 
     #button2 > p {
         font-size: 1.4em;
+    }
+    #button3 {
+        margin-left: 3rem;
+    }
+    #button4 {
+        margin-left: 6rem;
     }
 </style>

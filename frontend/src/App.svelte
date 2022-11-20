@@ -11,17 +11,17 @@
 </script>
 <Router url="{url}">
   <Route path="/">
-    <Map x={y_s} y={x_s}/>
+    <Map x={$y_s.value} y={$x_s.value}/>
     <Card_place />
     <Card_list />
   </Route>
   <Route path="generator">
-    <Map x={y_s} y={x_s}/>
+    <Map x={$y_s.value} y={$x_s.value}/>
     <Card_place />
     <Card_generator/>
   </Route>
   <Route path="all">
-    <Map x={y_s} y={x_s}/>
+    <Map x={$y_s.value} y={$x_s.value}/>
     <Card_place />
     <Card_all />
   </Route>
