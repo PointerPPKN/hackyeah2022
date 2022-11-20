@@ -3,12 +3,7 @@
 </script>
 <div class="container">
     <div id="button1"><p><Link to="about">🔙</Link></p></div>
-    <img src="https://cdn.cmc-gallery.pl/static/files/gallery/156/699374_1560171715.jpg" alt="">
-    <div id="tittle">
-        <h1>Empik Wrocław</h1>
-        <p>Ul. Króla Janusza</p>
-    </div>
-    <div id="button2"><p>Select</p></div>
+
 </div>
 
 <style>
