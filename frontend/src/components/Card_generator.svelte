@@ -1,10 +1,15 @@
 <script>
     import { Router, Link, Route } from "svelte-routing";
+
+const goBack = () => {
+    return window.location.href='http://127.0.0.1:5137/';
+}
+
 </script>
 <div class="container">
     <div id="button1"><p><Link to="about">🔙</Link></p></div>
 
-    <form action="http://127.0.0.1:5000/data/create" method="POST">
+    <form action="http://127.0.0.1:5000/data/create" method="POST" on:submit={() => window.location.href='http://127.0.0.1/'}>
         <div>
           <label for="tag_type">Tag Type</label>
           <input type="text" id="tag_type" name="tag_type" required>
@@ -19,8 +24,7 @@
           <label for="cord_y">cord_y</label>
           <input type="number" id="cord_y" name="cord_y" required>
         </div>
-
-        <button type="submit">Submit</button>
+       <input type=submit value="Add">
       </form>
 
 </div>
