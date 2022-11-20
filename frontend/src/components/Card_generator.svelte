@@ -4,15 +4,45 @@
 <div class="container">
     <div id="button1"><p><Link to="about">🔙</Link></p></div>
 
+    <form action="http://127.0.0.1:5000/data/create" method="POST">
+        <div>
+          <label for="tag_type">Tag Type</label>
+          <input type="text" id="tag_type" name="tag_type" required>
+        </div>
+
+        <div>
+          <label for="cord_x">cord_x</label>
+          <input type="number" id="cord_x" name="cord_x" required>
+        </div>
+
+        <div>
+          <label for="cord_y">cord_y</label>
+          <input type="number" id="cord_y" name="cord_y" required>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
 </div>
 
 <style>
+
+    .create {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 200px;
+    }
     .container{
+        display: grid;
+        justify-content: center;
+        align-items: center;
         position: relative;
         width: 30vw;
         margin-top: 5.5%;
         margin-right: 3.5%;
-        height: 80vh; 
+        height: 80vh;
         float: right;
         box-sizing: border-box;
         background: #608363;
