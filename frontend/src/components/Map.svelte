@@ -2,10 +2,11 @@
     import { onMount, onDestroy } from 'svelte'
     import { Map, NavigationControl, Marker } from 'maplibre-gl';
     import 'maplibre-gl/dist/maplibre-gl.css';
-  
     let map;
     let mapContainer;
     export let x,y;
+    x=global.x_var
+    y=global.y_var
     onMount(() => {
   
       const apiKey = 'ANx2EYNzbsX387SJBbPe';

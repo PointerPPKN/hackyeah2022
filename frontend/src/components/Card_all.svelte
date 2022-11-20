@@ -1,9 +1,26 @@
 <script>
     import { Router, Link, Route } from "svelte-routing";
+    import { onMount } from "svelte";
+    import Card from './Card_card.svelte';
+    import axios from "axios";
+    const endpoint = "http://localhost:5001/data";
+  let posts = [];
+
+  onMount(async function () {
+  const response = await axios.get(endpoint);
+  console.log(response.data);
+  posts = response.data;
+});
+    $: filteredItems = posts.slice(0, 5);
+    const filterItems = (i) => i.slice(0, 4);
 </script>
 <div class="container">
-    <div id="button1"><p><Link to="about">🔙</Link></p></div>
-
+    <div id="button1"><p><Link to="all">🔙</Link></p></div>
+    <br>
+    <br><br>    
+    {#each filteredItems as item}
+        <Card tag={item.tag_type} x={item.cord_x} y={item.cord_y}/>
+    {/each}
 </div>
 
 <style>
