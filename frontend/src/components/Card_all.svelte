@@ -11,16 +11,20 @@
   console.log(response.data);
   posts = response.data;
 });
-    $: filteredItems = posts.slice(0, 5);
-    const filterItems = (i) => i.slice(0, 4);
+    $: filteredItems = posts.slice(0, 1000);
 </script>
 <div class="container">
-    <div id="button1"><p><Link to="all">🔙</Link></p></div>
+    <div id="button1"><p><Link to="/">🔙</Link></p></div>
+    <div id="button3"><p><Link to="generator">🎮</Link></p></div>
+    <div id="button4"><p><Link to="all">🛍️</Link></p></div>
     <br>
-    <br><br>    
+    <br><br>
+    <div id="list">
     {#each filteredItems as item}
         <Card tag={item.tag_type} x={item.cord_x} y={item.cord_y}/>
     {/each}
+    </div>
+    
 </div>
 
 <style>
@@ -46,7 +50,7 @@
         border: 2px solid #000000;
         box-shadow: 0px 0px 0px 2px #381C1C, 0px 0px 0px 4px #E79B7B, 0px 0px 0px 6px #FFFFFF;
     }
-    #button1{
+    #button1, #button3, #button4{
         padding: 0.5% 3% 0.5% 3%;
         background-color: white;
         float: right;
@@ -91,8 +95,21 @@
         position: absolute;
         left: 50%;
     }
-
+    #button3,#button4 {
+        margin-left: 3rem;
+    }
     #button2 > p {
         font-size: 1.4em;
+    }
+    #list{
+        margin-left: 2%;
+        height: 85%;
+        overflow:hidden; overflow-y:scroll;
+    }
+    #button3 {
+        margin-left: 3rem;
+    }
+    #button4 {
+        margin-left: 6rem;
     }
 </style>

@@ -7,8 +7,9 @@ const goBack = () => {
 
 </script>
 <div class="container">
-    <div id="button1"><p><Link to="about">🔙</Link></p></div>
-
+    <div id="button1"><p><Link to="/">🔙</Link></p></div>
+    <div id="button3"><p><Link to="generator">🎮</Link></p></div>
+    <div id="button4"><p><Link to="all">🛍️</Link></p></div>
     <form action="http://127.0.0.1:5000/data/create" method="POST" on:submit={() => window.location.href='http://127.0.0.1/'}>
         <div>
           <label for="tag_type">Tag Type</label>
@@ -63,7 +64,7 @@ const goBack = () => {
         border: 2px solid #000000;
         box-shadow: 0px 0px 0px 2px #381C1C, 0px 0px 0px 4px #E79B7B, 0px 0px 0px 6px #FFFFFF;
     }
-    #button1{
+    #button1, #button3, #button4{
         padding: 0.5% 3% 0.5% 3%;
         background-color: white;
         float: right;
@@ -111,5 +112,12 @@ const goBack = () => {
 
     #button2 > p {
         font-size: 1.4em;
+    }
+
+    #button3 {
+        margin-left: 3rem;
+    }
+    #button4 {
+        margin-left: 6rem;
     }
 </style>
